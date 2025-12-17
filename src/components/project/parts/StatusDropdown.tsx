@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ChevronDown } from 'lucide-react';
-import { VettelTaskStatus } from '@/types/project';
+import { VettelTaskStatus } from '@/types';
 
 interface StatusDropdownProps {
   value: VettelTaskStatus;

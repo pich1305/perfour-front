@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
-import { BudgetElement } from '@/api/client/BudgetElementApiClient';
+import { BudgetElement } from '@/lib/api/budgetElement.api';
 
 interface ModalItemProps {
   isOpen: boolean;

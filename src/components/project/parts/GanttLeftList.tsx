@@ -1,7 +1,7 @@
 // src/components/project/parts/GanttLeftList.tsx
 import React from 'react';
 import { Edit, Trash2 } from 'lucide-react';
-import { TaskElement } from '@/types/project';
+import { TaskElement } from '@/types';
 
 interface GanttLeftListProps {
   items: { task: TaskElement; depth: number }[];

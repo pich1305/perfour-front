@@ -1,6 +1,6 @@
 // src/components/project/parts/Badges.tsx
+import { TaskPriority, VettelTaskStatus } from '@/types';
 import React from 'react';
-import { TaskPriority, VettelTaskStatus } from '@/types/project';
 
 export function StatusBadge({ status }: { status: VettelTaskStatus }) {
   const map: Record<VettelTaskStatus, { label: string; className: string }> = {

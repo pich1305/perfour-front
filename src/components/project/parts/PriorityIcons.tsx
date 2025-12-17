@@ -1,6 +1,6 @@
 // src/components/project/parts/PriorityIcons.tsx
 import React from 'react';
-import { TaskPriority } from '@/types/project';
+import { TaskPriority } from '@/types';
 
 export function PriorityIconMedium({ className = '' }: { className?: string }) {
   return (

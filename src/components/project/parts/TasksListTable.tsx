@@ -1,13 +1,7 @@
 // src/components/project/parts/TasksListTable.tsx
 import React, { Fragment } from 'react';
 import { ChevronRight } from 'lucide-react';
-import { TaskElement, TaskElementType, TaskPriority, VettelTaskStatus } from '@/types/project';
-import { CommentIcon } from './CommentIcon';
-import { StatusDropdown } from './StatusDropdown';
-import { InlineDateCell } from './InlineDateCell';
-import { InlineNameCell } from './InlineNameCell';
-import { AssigneesCell } from './AssigneesCell';
-import { PriorityDropdown } from './PriorityDropdown';
+import { TaskElement, TaskElementType, TaskPriority, VettelTaskStatus } from '@/types';
 import { GroupRow } from './rows/GroupRow';
 import { TaskRow } from './rows/TaskRow';
 import { CreateGroupIcon, CreateSubgroupIcon, CreateMilestoneIcon } from './CreateActionIcons';

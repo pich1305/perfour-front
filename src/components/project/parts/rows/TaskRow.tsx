@@ -1,7 +1,7 @@
 // src/components/project/parts/rows/TaskRow.tsx
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { TaskElement, TaskPriority, VettelTaskStatus } from '@/types/project';
+import { TaskElement, TaskPriority, VettelTaskStatus } from '@/types';
 import { InlineNameCell } from '../InlineNameCell';
 import { CommentIcon } from '../CommentIcon';
 import { StatusDropdown } from '../StatusDropdown';

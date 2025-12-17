@@ -501,7 +501,7 @@ export function ProjectTasksSection({ projectId }: ProjectTasksSectionProps) {
 
       {/* Sidebar de detalles del grupo (Framer Motion) */}
       <ItemSidebar
-        item={groupSidebarData}
+        task={groupSidebarData}
         isOpen={isGroupSidebarOpen}
         onClose={closeGroupSidebar}
         onSave={() => { /* Por ahora, solo cierre sin guardar cambios */ }}

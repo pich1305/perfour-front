@@ -1,6 +1,6 @@
 // src/components/project/parts/AssigneesModal.tsx
 import React from 'react';
-import type { TaskAssignee } from '@/api/client/VettelApiClient';
+import type { TaskAssignee } from '@/lib/api/VettelApiClient';
 
 interface AssigneesModalProps {
   isOpen: boolean;

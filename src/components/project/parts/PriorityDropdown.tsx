@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ChevronDown } from 'lucide-react';
-import { TaskPriority } from '@/types/project';
+import { TaskPriority } from '@/types';
 import { PriorityIcon } from './PriorityIcons';
 
 interface PriorityDropdownProps {

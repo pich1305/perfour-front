@@ -1,7 +1,7 @@
 // src/components/project/parts/PackagesList.tsx
 import React from 'react';
 import { Edit, Trash2, Eye } from 'lucide-react';
-import { TaskPackage } from '@/types/project';
+import { TaskPackage } from '@/types';
 
 interface PackagesListProps {
   items: TaskPackage[];
