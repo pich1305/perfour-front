@@ -1,0 +1,38 @@
+/* src/components/ui/Breadcrumb.css */
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0; /* Espaciado vertical ligero */
+    font-size: 1.25rem; /* 20px, un poco más grande como en el diseño */
+  }
+  
+  .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px de espacio entre ícono y texto */
+    color: #6b7280; /* color gris para los links */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .breadcrumb-item:hover {
+    color: #111827; /* Un gris más oscuro al pasar el mouse */
+  }
+  
+  .breadcrumb-item.active {
+    color: #111827; /* El color del texto para el elemento activo */
+    font-weight: 600; /* Texto en negrita para el elemento activo */
+  }
+  
+  .breadcrumb-icon {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+  }
+  
+  .breadcrumb-separator {
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    color: #d1d5db; /* color gris claro para el separador */
+    margin: 0 0.5rem; /* 8px de espacio a cada lado */
+  }

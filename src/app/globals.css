@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'gantt-task-react/dist/index.css';
+
+/* Gantt custom refinements */
+.bar-label{
+  display: initial;
+  fill: #111827 !important; /* text-gray-900 */
+  font-weight: 400;
+}
+.bar{
+  stroke: rgba(0,0,0,0.08);
+  stroke-width: 1px;
+  rx: 5;
+  ry: 5;
+}
+.bar-progress{
+  opacity: 0.9;
+}
+
+/* Configuración para proyectos (grupos y subgrupos) - disposición horizontal */
+.gantt-container svg g[data-testid*="project"] {
+  transform: translateY(0px) !important;
+}
+
+.gantt-container svg g[data-testid*="project"] rect:first-child {
+  transform: translateX(0px) !important;
+}
+
+.gantt-container svg g[data-testid*="project"] rect:last-child {
+  transform: translateX(0px) !important;
+}
+
+/* Forzar que los proyectos se muestren horizontalmente */
+.gantt-container svg g[data-testid*="project"] rect {
+  transform: translateY(0px) !important;
+}
+
+/* Deshabilitar completamente el resize del Gantt ocultando los handles */
+/* Mostrar zonas de enlace (reutilizamos los handles del gantt) */
+/* Mostrar visual de costados pero sin permitir resize: pointer-events none */
+/* Ocultar costados/handles ya no usados */
+.handleGroup,
+.handleGroupLeft,
+.handleGroupRight,
+.barHandle,
+.barHandleLeft,
+.barHandleRight { display: none !important; }
+
+/* Ocultar solo los handles específicos del Gantt */
+.gantt-container .handleGroup,
+.gantt-container .handleGroupLeft,
+.gantt-container .handleGroupRight,
+.gantt-container .barHandle,
+.gantt-container .barHandleLeft,
+.gantt-container .barHandleRight { 
+  display: none !important; 
+}
+
+/* Ocultar elementos específicos de handles del Gantt */
+.gantt-container svg g[data-testid*="handle"],
+.gantt-container svg g[class*="handle"],
+.gantt-container svg g[class*="Handle"],
+.gantt-container svg g[class*="resize"],
+.gantt-container svg g[class*="Resize"] {
+  display: none !important;
+}
+.gridRow:nth-child(even){
+  fill: #ffffff;
+}
+.gridRow:nth-child(odd){
+  fill: #ffffff;
+}
+.gridTick{
+  stroke: #e5e7eb;
+}
+.gridHeader{
+  fill: #ffffff;
+}
+
+/* Ensure text in gantt svg uses dark color */
+.gantt-wrapper svg text{
+  fill: #111827 !important;
+}
+
+/* Force black text in gantt bars and labels */
+.gantt-container svg text {
+  fill: #000000 !important;
+  font-weight: 300 !important;
+  color: #000000 !important;
+}
+
+.gantt-container .bar-label {
+  fill: #000000 !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+}
+
+/* Force all text elements in gantt to be black */
+.gantt-container svg * {
+  color: #000000 !important;
+}
+
+/* Ocultar texto en las barras del Gantt */
+.gantt-container .bar-label {
+  display: none !important;
+}
+
+/* Solo ocultar texto en las barras, NO en el encabezado */
+.gantt-container svg g[data-testid*="task"] text {
+  display: none !important;
+}
+
+.gantt-container text,
+.gantt-container tspan {
+  fill: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Integrated Gantt Table styles */
+.gantt-container {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+}
+
+.gantt-container .gantt {
+  min-width: max-content !important;
+}
+
+/* Remove margins/padding from gantt component to align perfectly */
+.gantt-container .gantt > div:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide phantom tasks (invisible spacer rows) */
+.gantt-container svg g[data-testid*="phantom"] {
+  display: none !important;
+}
+
+.gantt-container svg rect[style*="transparent"] {
+  display: none !important;
+}
+
+/* Hide number input arrows */
+@layer utilities {
+  .no-arrows::-webkit-outer-spin-button,
+  .no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .no-arrows {
+    -moz-appearance: textfield;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.transition-bg {
+  transition: background-color 0.2s ease-out;
+}
+
+.transition-transform {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
