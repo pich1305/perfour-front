@@ -1,8 +1,8 @@
+@import 'gantt-task-react/dist/index.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'gantt-task-react/dist/index.css';
 
 /* Gantt custom refinements */
 .bar-label{
