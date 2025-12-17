@@ -1,3 +1,7 @@
+
+export default function SignupPage() {
+  return null;
+}
 // // src/app/(auth)/signup/page.tsx
 // "use client";
 
